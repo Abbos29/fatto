@@ -2,6 +2,38 @@
 // Custom scripts
 
 
+const selectItem = document.querySelectorAll('.shop__top-select-name');
+const selectList = document.querySelectorAll('.shop__top-select-list');
+
+document.addEventListener('click', (event) => {
+  const isOutsideSelectItem = !event.target.closest('.shop__top-select-name');
+  if (isOutsideSelectItem) {
+    // Удаляем класс "active" у всех элементов selectList
+    selectList.forEach((listItem) => {
+      listItem.classList.remove('active');
+    });
+  }
+});
+
+selectItem.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    // Удаляем класс "active" у всех элементов selectList
+    selectList.forEach((listItem) => {
+      listItem.classList.remove('active');
+    });
+
+    // Добавляем класс "active" только к соответствующему элементу selectList
+    selectList[index].classList.add('active');
+  });
+});
+
+console.log(array);
+// console.log(selectItem);
+
+
+
+
+
 // Мобильное меню бургер
 function burgerMenu() {
     const burger = document.querySelector('.burger')
