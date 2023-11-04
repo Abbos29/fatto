@@ -1061,7 +1061,32 @@ nav {
   }
 
   .footer__wrapper {
-    grid-template-columns: 1fr;
     gap: 35px 35px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "footer__item-1 footer__item-1" "footer__item-2 footer__item-3" "footer__item-4 footer__item-4";
+  }
+
+  .footer__wrapper .footer__item-1 {
+    grid-area: footer__item-1;
+  }
+
+  .footer__wrapper .footer__item-2 {
+    grid-area: footer__item-2;
+  }
+
+  .footer__wrapper .footer__item-3 {
+    grid-area: footer__item-3;
+  }
+
+  .footer__wrapper .footer__item-4 {
+    grid-area: footer__item-4;
+  }
+
+  .footer__item-name {
+    font-size: 14px;
+  }
+
+  .footer__item-link {
+    font-size: 12px;
   }
 }
